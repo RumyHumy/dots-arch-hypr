@@ -88,6 +88,6 @@ fi
 ~/dots/conf/update.sh
 
 # Create "lesgo" in bin to launch Hyprland
-sudo cp ~/dots/lesgo /bin
+sudo cp ~/dots/scr/lesgo /bin
 
 echo "You are good to go!"
