@@ -1,0 +1,20 @@
+Install the nvidia-dkms
+Install nvidia-utiles & lib32-nvidia-utils (for Steam & Wine)
+Install egl-wayland (required for compatibility between the EGL API and the Wayland protocol)
+Install libva-nvidia-driver (hardware video acceleration)
+
+/etc/mkinitcpio.conf
+> MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
+/etc/modprobe.d/nvidia.conf
+> options nvidia_drm modeset=1 fbdev=1
+sudo mkinitcpio -P
+
+/.config/hypr/hyprland.conf
+env = LIBVA_DRIVER_NAME,nvidia
+env = XDG_SESSION_TUPE,wayland
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+
+cursor {
+    no_hardware_cursors = true
+}

@@ -27,12 +27,16 @@ fi
 # Installing yay
 read -p "Do you want to install yay [N,y]: " flag_install_yay
 if [ ${flag_install_yay,,} == "y" ]
-then	
-	echo "[RAMI] Installing yay..."
-	#if [ ! -d ~/opt/yay-git ];
-	#then
-	#		
-	#fi
+then		
+	if [ ! -f "/bin/yay" ];
+	then
+		echo "[RAMI] Installing yay..."
+		sudo pacman -S --needed git base-devel
+		git clone https://aur.archlinux.org/yay.git ~/yay
+		cd ~/yay
+		makepkg -si
+		rmdir -rf ~/yay
+	fi
 fi
 
 # Installing fonts
@@ -54,7 +58,10 @@ then
 		tmux \
 		rofi-wayland \
 		dolphin	\
-		swww
+		swww \
+		xdg-desktop-portal-hyprland \
+		pipewire \
+		wireplumber
 	yay -Sy cava
 	echo
 fi
