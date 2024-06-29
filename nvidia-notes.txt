@@ -1,4 +1,8 @@
-Install the nvidia-dkms
+/etc/pacman.conf
+- Uncomment [multilib]
+pacman -Sy
+
+Install the nvidia & nvidia-dkms & nvidia-lts & linux-headers
 Install nvidia-utiles & lib32-nvidia-utils (for Steam & Wine)
 Install egl-wayland (required for compatibility between the EGL API and the Wayland protocol)
 Install libva-nvidia-driver (hardware video acceleration)
@@ -11,7 +15,7 @@ sudo mkinitcpio -P
 
 /.config/hypr/hyprland.conf
 env = LIBVA_DRIVER_NAME,nvidia
-env = XDG_SESSION_TUPE,wayland
+env = XDG_SESSION_TYPE,wayland
 env = GBM_BACKEND,nvidia-drm
 env = __GLX_VENDOR_LIBRARY_NAME,nvidia
 

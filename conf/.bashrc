@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Programs with right configs
-alias cava='cava -p ~/dotfiles/config/cava/config'
+alias cava='cava -p ~/dots/conf/cava/config'
 
 # Dotfiles shortcuts
 # alias cdots='cd ~/dots/conf'
