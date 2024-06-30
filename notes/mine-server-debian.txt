@@ -1,0 +1,23 @@
+sudo apt install default-jdk -y
+java -version
+sudo adduser minecraft
+mkdir minecraft && cd minecraft
+# wget https://piston-data.mojang.com/v1/objects/84194a2f286ef7c14ed7ce0090dba59902951553/server.jar
+java -Xmx1024M -Xms1024M -jar server.1.21.jar nogui 
+echo "eula=true" > eula.txt
+sudo ufw enable
+sudo ufw allow 25565
+sudo ufw status # must be active
+# java -Xmx1024M -Xms1024M -jar server.jar nogui
+java -Xmx1024M -Xms1024M -jar server.jar nogui  
+
+open port:
+sudo iptables -A INPUT -p tcp --dport 25565 --jump ACCEPT
+# sudo iptables -A TCP -p tcp --dport 25565 -j ACCEPT
+
+online-mode=false
+
+# Arch
+pacman -S jre-openjdk
+cd ~
+mkdir minecraft && cd minecraft

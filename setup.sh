@@ -54,7 +54,7 @@ if [ ${flag_install_de,,} == "y" ]
 then
 	echo "[RAMI] Installing Hyprland & other..."
 	sudo pacman -Sy hyprland \
-		kitty \
+		kitty cool-retro-term \
 		tmux \
 		rofi-wayland \
 		dolphin	\

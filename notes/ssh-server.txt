@@ -1,0 +1,5 @@
+sudo ssh-keygen -A
+
+sudo systemctl restart sshd
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sshd -t
