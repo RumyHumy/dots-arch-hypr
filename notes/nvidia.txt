@@ -2,8 +2,7 @@
 - Uncomment [multilib]
 pacman -Sy
 
-Install the nvidia or nvidia-dkms & nvidia-lts & linux-lts-headers & linux-rt-headers
-dkms status
+Install the nvidia & nvidia-dkms & nvidia-lts & linux-headers
 Install nvidia-utiles & lib32-nvidia-utils (for Steam & Wine)
 Install egl-wayland (required for compatibility between the EGL API and the Wayland protocol)
 Install libva-nvidia-driver (hardware video acceleration)

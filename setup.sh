@@ -61,7 +61,8 @@ then
 		swww \
 		xdg-desktop-portal-hyprland \
 		pipewire \
-		wireplumber
+		wireplumber \
+		wl-clipboard
 	yay -Sy cava
 	echo
 fi
@@ -92,7 +93,7 @@ fi
 # nvidia-smi
 
 # Update configs
-~/dots/conf/update.sh
+~/dots/scr/update.sh
 
 # Create "lesgo" in bin to launch Hyprland
 sudo cp ~/dots/scr/lesgo /bin
