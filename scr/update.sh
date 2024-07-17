@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Copying configs
-cp -r ~/dots/conf/.bashrc ~/
+cp ~/dots/conf/.bashrc ~/
+cp ~/dots/conf/.zshrc ~/
 mkdir -p ~/.config/hypr
 cp -r ~/dots/conf/hypr/* ~/.config/hypr/
 mkdir -p ~/.config/kitty
