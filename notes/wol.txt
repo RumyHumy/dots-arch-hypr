@@ -1,0 +1,5 @@
+sudo iptables -A INPUT -p tcp --dport 9 -j ACCEPT
+ip link
+ip addr show
+sudo ethtool enp3s0
+sudo ethtool -s enp3s0 wol g

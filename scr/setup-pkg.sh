@@ -3,6 +3,7 @@ echo "SETUP - Installing packages..."
 sudo pacman -Sy hyprland \
 	kitty cool-retro-term \
 	tmux \
+	zsh \
 	rofi-wayland \
 	dolphin	\
 	swww \
@@ -10,6 +11,8 @@ sudo pacman -Sy hyprland \
 	pipewire \
 	wireplumber \
 	wl-clipboard \
-	github-cli
+	github-cli \
+	openssh \
+	tree
 yay -Sy cava
 echo
