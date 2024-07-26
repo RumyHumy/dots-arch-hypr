@@ -1,0 +1,8 @@
+sudo pacman -Sy os-prober ntfs-3g
+
+nvim /etc/default/grub
+GRUB_TIMEOUT=0
+...
+GRUB_DISABLE_OS_PROBER=false
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg

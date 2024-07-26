@@ -9,6 +9,7 @@ cd ~/dots/scr
 
 ./setup-yay.sh
 ./setup-pkg.sh
+./setup-fonts.sh
 ./setup-audio.sh
 ./setup-gh.sh
 #./setup-nvidia.sh
