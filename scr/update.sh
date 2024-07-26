@@ -9,5 +9,14 @@ cp -r ~/dots/conf/kitty/* ~/.config/kitty/
 mkdir -p ~/.config/cava
 cp -r ~/dots/conf/cava/* ~/.config/cava/
 
+# If tdots exists, then update
+if [ -d ~/tdots ];
+then
+	~/tdots/update.sh
+fi
+
+# Syncing
+~/dots/scr/sync.sh
+
 # Syncing
 ~/dots/scr/sync.sh
