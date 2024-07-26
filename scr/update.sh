@@ -9,5 +9,5 @@ cp -r ~/dots/conf/kitty/* ~/.config/kitty/
 mkdir -p ~/.config/cava
 cp -r ~/dots/conf/cava/* ~/.config/cava/
 
-# copy bins
-sudo cp ~/dots/scr/bin/* /bin/.
+# Syncing
+~/dots/scr/sync.sh
